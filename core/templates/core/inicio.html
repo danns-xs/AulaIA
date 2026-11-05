@@ -1,0 +1,82 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}Inicio | AulaIA{% endblock %}
+
+{% block contenido %}
+
+<section class="hero">
+    <div class="hero-text">
+        <span class="eyebrow">APRENDE · EXPLORA · COMPRENDE</span>
+
+        <h1>La inteligencia artificial, más fácil de entender.</h1>
+
+        <p>
+            Descubre cómo utilizar la inteligencia artificial de manera
+            crítica, consciente y responsable. Aprende a aprovechar
+            sus posibilidades sin dejar de pensar por ti mismo.
+        </p>
+
+        <a href="{% url 'modulo' 'aprende' %}" class="primary-button">
+            Comenzar a aprender →
+        </a>
+    </div>
+
+    <div class="hero-decoration">
+        <span>IA</span>
+        <p>Conocimiento para un mundo inteligente.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-heading">
+        <span class="eyebrow">TU ESPACIO DE APRENDIZAJE</span>
+        <h2>Explora y aprende a tu ritmo.</h2>
+        <p>Encuentra recursos para comprender y utilizar la IA.</p>
+    </div>
+
+    <div class="cards">
+
+        <a href="{% url 'modulo' 'aprende' %}" class="card">
+            <span class="card-icon">01</span>
+            <h3>Conoce la IA</h3>
+            <p>Aprende sus conceptos, características y aplicaciones.</p>
+            <span class="card-link">Explorar módulo →</span>
+        </a>
+
+        <a href="{% url 'modulo' 'prompts' %}" class="card">
+            <span class="card-icon">02</span>
+            <h3>Aprende a utilizarla</h3>
+            <p>Descubre cómo formular instrucciones claras y efectivas.</p>
+            <span class="card-link">Explorar módulo →</span>
+        </a>
+
+        <a href="{% url 'modulo' 'responsable' %}" class="card">
+            <span class="card-icon">03</span>
+            <h3>Uso responsable</h3>
+            <p>Desarrolla hábitos de seguridad y pensamiento crítico.</p>
+            <span class="card-link">Explorar módulo →</span>
+        </a>
+
+        <a href="{% url 'modulo' 'actividades' %}" class="card">
+            <span class="card-icon">04</span>
+            <h3>Actividades</h3>
+            <p>Comprueba tus conocimientos con retos y cuestionarios.</p>
+            <span class="card-link">Explorar módulo →</span>
+        </a>
+
+    </div>
+</section>
+
+<section class="assistant-banner">
+    <div>
+        <span class="eyebrow">ASISTENTE VIRTUAL</span>
+        <h2>¿Tienes alguna pregunta sobre IA?</h2>
+        <p>Conversa con nuestro asistente y recibe orientación.</p>
+    </div>
+
+    <a href="{% url 'modulo' 'asistente' %}" class="secondary-button">
+        Conocer el asistente →
+    </a>
+</section>
+
+{% endblock %}

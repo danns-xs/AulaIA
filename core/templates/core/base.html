@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}AulaIA{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/estilos.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="{% url 'inicio' %}" class="logo">AulaIA<span>.</span></a>
+
+    <nav>
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'modulo' 'aprende' %}">Aprende sobre IA</a>
+        <a href="{% url 'modulo' 'prompts' %}">Aprende a utilizarla</a>
+        <a href="{% url 'modulo' 'responsable' %}">Uso responsable</a>
+        <a href="{% url 'modulo' 'actividades' %}">Actividades</a>
+    </nav>
+
+    <a href="{% url 'modulo' 'asistente' %}" class="nav-button">
+        Asistente IA ↗
+    </a>
+</header>
+
+<main>
+    {% block contenido %}
+    {% endblock %}
+</main>
+
+<footer>
+    <h3>AulaIA.</h3>
+    <p>Aprende a comprender y utilizar la inteligencia artificial.</p>
+    <span>© 2026 AulaIA · Educación y tecnología responsable</span>
+</footer>
+
+</body>
+</html>
